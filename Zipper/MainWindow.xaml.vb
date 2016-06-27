@@ -20,8 +20,13 @@ Class MainWindow
                 sb.AppendLine(__dir)
             Next
             sb.AppendLine("Excluded Files:")
+            For Each __file In zs.ignorefile
+                sb.Append(__file)
+            Next
 
-            tbMain.Text = String.Join(vbNewLine, igDirs) + vbNewLine + String.Join(vbNewLine, igFiles)
+
+
+
 
 
             Dim addresslength As Integer = di.FullName.Length
@@ -83,6 +88,10 @@ Class MainWindow
                     Next
                 End Using
             End Using
+            For Each __file In fileEntries
+                sb.AppendLine(__file.Substring(addresslength + 1))
+            Next
+            tbMain.Text = sb.ToString
         End If
     End Sub
 End Class

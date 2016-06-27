@@ -8,8 +8,11 @@
         Icon="./Zipper.png"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <TextBlock TextWrapping="Wrap" Name="tbMain">
-            
-        </TextBlock>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <TextBlock TextWrapping="Wrap" Name="tbMain" >
+
+            </TextBlock>
+        </ScrollViewer>
+
     </Grid>
 </Window>
